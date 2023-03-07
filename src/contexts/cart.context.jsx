@@ -17,14 +17,6 @@ const addCartItem = (cartItems, productToAdd) => {
   return [...cartItems, { ...productToAdd, quantity: 1 }];
 };
 
-const calculateCartItemCount = (cartItems) => {
-  let count = 0;
-  cartItems.map((item) => {
-    count += item.quantity;
-  });
-  return count;
-};
-
 export const CartContext = createContext({
   isCartOpen: false,
   setIsCartOpen: () => {},
