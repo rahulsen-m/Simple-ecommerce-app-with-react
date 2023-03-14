@@ -19,6 +19,11 @@ const Nevigation = () => {
         <Link className="logo-container" to="/">
           <Crown className="logo" />
         </Link>
+        {currentUser ? (
+          <span>{<b>{currentUser && currentUser.displayName}</b>}</span>
+        ) : (
+          ""
+        )}
         <div className="nav-links-container">
           <Link className="nav-link" to="/shop">
             SHOP
